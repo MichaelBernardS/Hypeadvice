@@ -24,10 +24,7 @@
 			<b:messages globalOnly="true" showSummary="true" redisplay="false" id="mensagensGlobais"/>
 			<h:form id="form-advice">
 				<b:form>
-					<b:inputText id="name" value="#{adviceListBean.advice.nome}" placeholder="ID na API..." label="Pesquisar Conselho"/>
-					<b:message for="@previous" />
-
-					<b:inputTextarea placeholder="Descrição..." value="#{adviceListBean.advice.descricao}" />
+					<b:inputTextarea label="Pesquisar Conselho por Descrição" placeholder="Descrição..." value="#{adviceListBean.advice.descricao}" />
 					<b:message for="@previous" />
 
 					<b:commandButton actionListener="#{adviceListBean.buscar}" look="info"  update="form-advice-list mensagensGlobais" value="Buscar" >
@@ -37,6 +34,7 @@
 		</b:jumbotron>
 		<b:jumbotron>
 			<h:form id="form-advice-list">
+				<h4 style="text-align:center">Conselhos Localizados</h4>
 				<b:dataTable value="#{adviceListBean.adviceListVO.slips}"
 							 var="advice">
 					<b:dataTableColumn style="width:10%" value="#{advice.id}" />
