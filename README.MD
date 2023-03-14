@@ -15,3 +15,5 @@ Siga as orientações abaixo para configurar o projeto:
 **IMPORTANTE:** garanta que o data base fique em "jdbc:postgresql://localhost:5432/hypeadvice", caso contrario atualize o parametro spring.datasource.url do arquivo application.properties
 
 * Baixe as dependências via **Maven**
+
+Após iniciar a aplicação, acesse http://localhost:8080/advice-list.xhtml
